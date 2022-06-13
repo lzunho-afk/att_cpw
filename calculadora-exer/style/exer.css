@@ -1,0 +1,44 @@
+body {
+    padding-top: 6%;
+    margin: 0px;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    text-align: center;
+}
+
+.formcontrol {
+    grid-template-rows: 50px 100px 50px 100px;
+}
+
+.form input {
+    outline: 0;
+    position: relative;
+    left: 5px;
+    top: 5px;
+    border: 0;
+    color: purple;
+    background-color: 4px;
+    width: 60px;
+    height: 50px;
+    margin: 5px;
+    font-size: 20px;
+    box-shadow: 0 4px rgba(0,0,0,0.2);
+}
+
+#inputTexto {
+    width: 96%;
+}
