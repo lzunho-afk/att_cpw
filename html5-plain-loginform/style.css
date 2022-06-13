@@ -1,0 +1,81 @@
+body {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: black;
+    color: white;
+}
+
+input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#login-page {
+    width: 520px;
+    height: 440px;
+}
+
+#login-page-header {
+    width: 100%;
+    height: 50%;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-page-header h1 {
+    width: 100%;
+    height: 10%;
+}
+
+#login-page-header p {
+    width: 100%;
+    height: 90%;
+}
+
+#login-form {
+    margin: 0 auto;
+    align: center;
+    width: 100%;
+    height: 50%;
+    border: 2px solid white;
+}
+
+.login-input-box {
+    width: 100%;
+    height: 75%;
+}
+
+.login-submit-box {
+    width: 100%;
+    height: 25%;
+    padding: 10px;
+}   
+    
+input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}

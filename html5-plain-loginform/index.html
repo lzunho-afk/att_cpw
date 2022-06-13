@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+	<meta charset="utf-8">
+	<title>Simple login implementation</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="form.js"></script>
+    </head>
+    <body>
+	<div id="login-page">
+	    <header id="login-page-header">
+		<h1>Login</h1>
+		<p>Please, sign-in using your credentials</p>
+	    </header>
+
+	    <form id="login-form" onsubmit="login()" method="POST">
+		<div class="login-input-box">
+		    <label for="email">Email</label>
+		    <input type="email" id="email" name="email" placeholder="username@example.com" required>
+		    
+		    <label for="passw">Password</label>
+		    <input type="password" id="passw" name="passw" placeholder="qwerty123" required>
+		</div>
+		<div class="login-submit-box">
+		    <input type="reset" name="reset-bt" value="Reset" >
+		    <input type="submit" name="submit-bt" value="Sign-in" >
+		    <label><input type="checkbox" checked="checked" name="remember">Remember me</label>
+		</div>
+	    </form>
+	</div>
+    </body>
+</html>
