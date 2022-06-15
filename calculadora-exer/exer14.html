@@ -7,9 +7,8 @@
     <head>
         <meta charset="utf-8">
         <title>Calculadora - Aprimoramento Funcionalidade</title>
-	    <link rel="stylesheet" href="style/exer.css"/>
+	<link rel="stylesheet" href="style/exer.css"/>
         <script src="js/jquery-3.6.0.js"></script>
-        <script src="js/exer.js"></script>
     </head>
     <body>
         <div class="main">
@@ -38,14 +37,89 @@
                 </div>
                 <div class="formcontrol">
                     <input type="button" value="0" id="btn0">
-                    <input type="button" value="," id="btnVirgula">  
+                    <input type="button" value="^" id="btnElevado">  
                     <input type="button" value="C" id="btnReset">    
                     <input type="button" value="*" id="btnMultiplicacao">                  
                 </div>
-                <div class="formcontrol">                      
+                <div class="formcontrol">
                     <input type="button" value="=" id="btnIgual" style="width: 110px;">
                 </div> 
             </div>
         </div>
+	<script>
+	 let btn = "";
+	 
+	 $(document).ready(function(){
+	     $("input").click(function(){
+		 btn = $(this).attr("value");
+		 buttonHandler();
+	     });
+	 });
+
+	 function buttonHandler() {
+	     switch (btn) {
+		 case "0":
+		 case "1":
+		 case "2":
+		 case "3":
+		 case "4":
+		 case "5":
+		 case "6":
+		 case "7":
+		 case "8":
+		 case "9":
+		 case "+":
+		 case "-":
+		 case "*":
+		 case "/":
+		 case "^":
+		     concatBtn();
+		     break;
+		 case ",":
+		     var text = document.getElementById("inputTexto").value;
+		     text = text + ".";
+		     document.getElementById("inputTexto").value = text;
+		 case "C":
+		     document.getElementById("inputTexto").value = "";
+		     break;
+		 case "=":
+		     var text = document.getElementById("inputTexto").value;
+
+		     if(text.indexOf("+") > -1){
+			 var p1 = text.substring(0, text.indexOf("+"));
+			 var p2 = text.substring(text.indexOf("+")+1, text.length);
+
+			 document.getElementById("inputTexto").value = parseInt(p1) + parseInt(p2); 
+		     } else if(text.indexOf("-") > -1) {
+			 var p1 = text.substring(0, text.indexOf("-"));
+			 var p2 = text.substring(text.indexOf("-")+1, text.length);
+
+			 document.getElementById("inputTexto").value = parseInt(p1) - parseInt(p2);
+		     } else if(text.indexOf("*") > -1) {
+			 var p1 = text.substring(0, text.indexOf("*"));
+			 var p2 = text.substring(text.indexOf("*")+1, text.length);
+
+			 document.getElementById("inputTexto").value = parseInt(p1) * parseInt(p2);
+		     } else if(text.indexOf("/") > -1) {
+			 var p1 = text.substring(0, text.indexOf("/"));
+			 var p2 = text.substring(text.indexOf("/")+1, text.length);
+
+			 document.getElementById("inputTexto").value = parseInt(p1) / parseInt(p2);
+		     } else if(text.indexOf("^") > -1) {
+			 var p1 = text.substring(0, text.indexOf("^"));
+			 var p2 = text.substring(text.indexOf("^")+1, text.length);
+
+			 document.getElementById("inputTexto").value = p1 ** p2;
+		     }
+		     break;
+	     }
+	 }
+
+	 function concatBtn() {
+	     var text = document.getElementById("inputTexto").value;
+	     text = text + btn;
+	     document.getElementById("inputTexto").value = text;
+	 }
+	</script>
     </body>
 </html>  
