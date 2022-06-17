@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0px;
+}
+
+#main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons {
+    width: 90%;
+    height: 10%;
+    padding: 15px;
+}
+
+#img {
+    width: 500px;
+    height: 373px;
+    border: 2px solid white;
+}
+
