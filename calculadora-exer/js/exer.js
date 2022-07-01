@@ -38,6 +38,7 @@ function concatBtn() {
 function makeOperations() {
     var text = document.getElementById("inputTexto").value;
     var op = "";
+    var calc = null;
 
     if (text.indexOf("^") > -1) {
         op = "^";
@@ -48,7 +49,9 @@ function makeOperations() {
             document.getElementById("inputTexto").value = "Operação inválida!";
             return;
         }
-        document.getElementById("inputTexto").value = parseInt(p1) ** parseInt(p2);
+        calc = parseInt(p1) ** parseInt(p2);
+        document.getElementById("inputTexto").value = calc;
+        document.getElementById("history").value += "\n" + p1 + op + p2 + "=" + calc;
     } else if (text.indexOf("/") > -1) {
         op = "/";
         p1 = text.substring(0, text.indexOf(op));
@@ -58,7 +61,9 @@ function makeOperations() {
             document.getElementById("inputTexto").value = "Operação inválida!";
             return;
         }
-        document.getElementById("inputTexto").value = parseInt(p1) / parseInt(p2);
+        calc = parseInt(p1) / parseInt(p2);
+        document.getElementById("inputTexto").value = calc;
+        document.getElementById("history").value += "\n" + p1 + op + p2 + "=" + calc;
     } else if (text.indexOf("*") > -1) {
         op = "*";
         p1 = text.substring(0, text.indexOf(op));
@@ -68,7 +73,9 @@ function makeOperations() {
             document.getElementById("inputTexto").value = "Operação inválida!";
             return;
         }
-        document.getElementById("inputTexto").value = parseInt(p1) * parseInt(p2);
+        calc = parseInt(p1) * parseInt(p2);
+        document.getElementById("inputTexto").value = calc;
+        document.getElementById("history").value += "\n" + p1 + op + p2 + "=" + calc;
     } else if (text.indexOf("+") > -1) {
         op = "+";
         p1 = text.substring(0, text.indexOf(op));
@@ -78,7 +85,9 @@ function makeOperations() {
             document.getElementById("inputTexto").value = "Operação inválida!";
             return;
         }
-        document.getElementById("inputTexto").value = parseInt(p1) + parseInt(p2);
+        calc = parseInt(p1) + parseInt(p2);
+        document.getElementById("inputTexto").value = calc;
+        document.getElementById("history").value += "\n" + p1 + op + p2 + "=" + calc;
     } else if (text.indexOf("-") > -1) {
         op = "-";
         p1 = text.substring(0, text.indexOf(op));
@@ -88,7 +97,9 @@ function makeOperations() {
             document.getElementById("inputTexto").value = "Operação inválida!";
             return;
         }
-        document.getElementById("inputTexto").value = parseInt(p1) - parseInt(p2);
+        calc = parseInt(p1) - parseInt(p2);
+        document.getElementById("inputTexto").value = calc;
+        document.getElementById("history").value += "\n" + p1 + op + p2 + "=" + calc;
     } 
 }
 
