@@ -1,10 +1,31 @@
-header {
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Helvetica, Sans-serif;
+    height: 100%;
+    margin: 0;
+    padding-top: 0;
+    display: flex;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 60px;
+}
+
+.header {
+    height: 100%;
     overflow: hidden;
     background-color: #ccccff;
     padding: 20px 10px;
 }
 
-header a {
+.header a {
     float: left;
     color: black;
     text-align: center;
@@ -13,19 +34,19 @@ header a {
     border-radius: 4px;
 }
 
-header .header-title {
+.header .header-title {
     font-size: 18px;
     line-height: 25px;
     font-size: 25px;
     font-weight: bold;
 }
 
-header a:hover {
+.header a:hover {
     background-color: #9999ff;
     color: black;
 }
 
-header a.active {
+.header a.active {
     background-color: #9999ff;
     font-weight: bold;
 }
@@ -38,6 +59,69 @@ header a.active {
     display: inline;
 }
 
+footer {
+    margin-top: auto;
+    height: 100%;
+}
+
+.footer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #ccccff;
+}
+
+.footer .col {
+    width: 190px;
+    height: auto;
+    margin-left: 15px;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: 0px 20px 20px 20px;
+}
+
+.footer .col h1 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.200em;
+}
+
+.footer .col ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .col ul li {
+    color: #999999;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+}
+
+.footer .col ul li:hover {
+    color: #ffffff;
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+}
+
+.clearfix {
+    clear: both;
+}
+
 @media screen and (max-width: 500px) {
     header a {
         float: none;
@@ -46,6 +130,15 @@ header a.active {
     }
     .header-side {
         float: none;
+    }
+    .footer .col {
+        width: 50%;
+    }
+    .footer .col h1 {
+        font-size: 14px;
+    }
+    .footer .col ul li {
+        font-size: 13px;
     }
 }
 
