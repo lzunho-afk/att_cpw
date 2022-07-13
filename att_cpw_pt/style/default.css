@@ -1,0 +1,51 @@
+header {
+    overflow: hidden;
+    background-color: #ccccff;
+    padding: 20px 10px;
+}
+
+header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+header .header-title {
+    font-size: 18px;
+    line-height: 25px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+header a:hover {
+    background-color: #9999ff;
+    color: black;
+}
+
+header a.active {
+    background-color: #9999ff;
+    font-weight: bold;
+}
+
+.header-side {
+    float: right;
+}
+
+.header-item {
+    display: inline;
+}
+
+@media screen and (max-width: 500px) {
+    header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .header-side {
+        float: none;
+    }
+}
+

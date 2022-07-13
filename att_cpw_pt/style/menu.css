@@ -1,0 +1,21 @@
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li a {
+    display: block;
+    background: #d4dde4 url(/img/seta.png);
+    color: #333;
+    border-left: 5px solid #7d97ad;
+    text-decoration: none;
+    padding: 3px 15px 3px 3px;
+    margin-bottom: 1px;
+}
+
+#menu li a:hover {
+    background: #dce3e9 url(/img/seta.png);
+    color: #999;
+    border-left: 5px solid #cad2dd;
+}
