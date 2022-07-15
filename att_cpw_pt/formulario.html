@@ -16,7 +16,7 @@
     </head>
     <body>
         <header>
-            <div class="header">
+            <div id="header">
                 <a href="index.html" class="header-title">Relatório CPW-PT</a>
                 <div class="header-side">
                     <div class="header-item"><a href="formulario.html">Contato (Formulário de Envio)</a></div>
@@ -30,46 +30,52 @@
             <form id="form" name="form" method="post">
                 <fieldset>
                     <legend>Formulário de Contato</legend>
-                    <span>
+                    <div>
                         <label for="name">Nome:</label>
-                        <input required type="text" placeholder="Meu nome" id="name" value=""/>
-                    </span><br/>
-                    <span>
+                        <input type="text" placeholder="Meu nome" name="name" id="name" value=""/>
+                    </div><br/>
+                    <div>
                         <label for="cpf">CPF:</label>
-                        <input required type="text" placeholder="xxx.xxx.xxx-xx" id="cpf" value=""/>
-                    </span><br/>
-                    <span>
+                        <input type="text" placeholder="xxx.xxx.xxx-xx" name="cpf" id="cpf" value=""/>
+                    </div><br/>
+                    <div>
                         <label for="email">Email:</label>
-                        <input required type="email" placeholder="mail@exemplo.com" id="email" value=""/>
-                    </span><br/>
-                    <span>
+                        <input type="email" placeholder="mail@exemplo.com" name="email" id="email" value=""/>
+                    </div><br/>
+                    <div>
+                        <label for="cel">Celular:</label>
+                        <input type="text" placeholder="(xx) xxxxx-xxxx" name="cel" id="cel" value=""/>
+                    </div><br/>
+                    <div>
                         <label for="tel">Telefone:</label>
-                        <input required type="text" placeholder="(xx) xxxxx-xxxx" id="tel" value=""/>
-                    </span><br/>
+                        <input type="text" placeholder="(xx) xxxx-xxxx" name="tel" id="tel" value=""/>
+                    </div><br/>
                     <fieldset>
                         <legend>Endereço:</legend>
-                        <span>
+                        <div>
                             <label for="cep">CEP:</label>
-                            <input required type="text" placeholder="xxxxx-xxx" id="cep" value=""/>
-                        </span><br/>
-                        <span>
+                            <input type="text" placeholder="xxxxx-xxx" name="cep" id="cep" value=""/>
+                        </div><br/>
+                        <div>
                             <label for="city">Cidade:</label>
-                            <input required type="text" placeholder="Passo Fundo" id="city" value=""/>
-                        </span><br/>
-                        <span>
-                            <label for="street">Rua:</label>
-                            <input required type="text" placeholder="Rua Gen. Netto" id="street" value=""/>
-                        </span><br/>
-                        <span>
-                            <label for="number">Número:</label>
-                            <input required type="text" placeholder="xxxx" id="number" value=""/>
-                        </span><br/>
+                            <input type="text" placeholder="Passo Fundo" name="city" id="city" value=""/>
+                        </div><br/>
+                        <div class="addr-bind">
+                            <div class="addr-bind-item">
+                                <label for="street">Rua:</label>
+                                <input type="text" placeholder="Rua Gen. Netto" name="city" id="street" value=""/>
+                            </div>
+                            <div class="addr-bind-item">
+                                <label for="number">Número:</label>
+                                <input type="text" placeholder="xxxx" name="number" id="number" value=""/>
+                            </div>
+                        </div>
                     </fieldset>
-                    <span>
+                    <div>
                         <label for="msg">Mensagem:</label>
-                        <textarea required placeholder="Sua mensagem aqui" id="msg" rows="6" cols="55" minlength="1" maxlength="100"></textarea>
-                    </span><br/>
-                    <input type="button" id="submit" value="Enviar"/>
+                        <textarea  placeholder="Sua mensagem aqui" name="msg" id="msg" rows="6" cols="55" minlength="1" maxlength="100"></textarea>
+                    </div><br/>
+                    <input type="submit" id="submit" value="Enviar"/>
                 </fieldset>
             </form>
         </main>
