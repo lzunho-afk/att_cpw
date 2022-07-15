@@ -1,7 +1,6 @@
 $(document).ready(function() {
     $("#form").validate({
-        debug: false,
-        rule: {
+        rules: {
             name: {
                 required: true,
                 digits: true,
