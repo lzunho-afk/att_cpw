@@ -1,30 +1,26 @@
-html {
-    height: 100%;
-    min-height: 100%;
-}
-
 body {
     font-family: Helvetica, Sans-serif;
     height: 100%;
+    width: 100%;
     margin: 0;
     padding-top: 0;
 }
 
 main {
+    height: 90%;
     width: 100%;
-    height: 100%;
     box-sizing: border-box;
     padding: 60px;
 }
 
-.header {
+#header {
     height: 100%;
+    padding: 20px 10px;
     overflow: hidden;
     background-color: #ccccff;
-    padding: 20px 10px;
 }
 
-.header a {
+#header a {
     float: left;
     color: black;
     text-align: center;
@@ -33,19 +29,19 @@ main {
     border-radius: 4px;
 }
 
-.header .header-title {
+#header .header-title {
     font-size: 18px;
     line-height: 25px;
     font-size: 25px;
     font-weight: bold;
 }
 
-.header a:hover {
+#header a:hover {
     background-color: #9999ff;
     color: black;
 }
 
-.header a.active {
+#header a.active {
     background-color: #9999ff;
     font-weight: bold;
 }
@@ -58,14 +54,18 @@ main {
     display: inline;
 }
 
-.footer {
+#footer {
+    height: 100px;
+}
+
+#footer {
     width: 100%;
     height: auto;
     position: relative;
     background-color: #ccccff;
 }
 
-.footer .col {
+#footer .col {
     width: 190px;
     height: auto;
     margin-left: 15px;
@@ -73,7 +73,7 @@ main {
     box-sizing: border-box;
 }
 
-.footer .col h1 {
+#footer .col h1 {
     margin: 0;
     padding: 0;
     font-family: inherit;
@@ -85,13 +85,13 @@ main {
     letter-spacing: 0.200em;
 }
 
-.footer .col ul {
+#footer .col ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.footer .col ul li {
+#footer .col ul li {
     color: #999999;
     font-size: 14px;
     font-family: inherit;
@@ -101,32 +101,19 @@ main {
     transition: .2s;
 }
 
-.footer .col ul li:hover {
+#footer .col ul li:hover {
     color: #ffffff;
     transition: .1s;
 }
 
-.clearfix {
-    clear: both;
-}
-
 @media screen and (max-width: 500px) {
-    header a {
+    .header-item {
         float: none;
         display: block;
         text-align: left;
     }
     .header-side {
         float: none;
-    }
-    .footer .col {
-        width: 50%;
-    }
-    .footer .col h1 {
-        font-size: 14px;
-    }
-    .footer .col ul li {
-        font-size: 13px;
     }
 }
 
