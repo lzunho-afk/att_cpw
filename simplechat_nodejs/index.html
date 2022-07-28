@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Simple Chat - Node.js</title>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io();
+
+            var messages = document.getElementById('messages');
+            var form = document.getElementById('msg-send-form');
+            var input = document.getElementById('msg-input');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (input.value) {
+                    socket.emit('chat message', input.value);
+                    input.value = '';
+                }
+            });
+
+            socket.on('chat message', function(msg) {
+                var item = document.createElement('li');
+
+                item.textContent = msg;
+                messages.appendChild(item);
+
+                window.scrollTo(0, document.body.scrollHeight);
+            });
+        </script>
+    </head>
+    <body>
+        <ul id="msg-list"></ul>
+        <form id="msg-send-form" action="">
+            <input id="msg-input" autocomplete="off"/>
+            <button>Send</button>
+        </form>
+    </body>
+</html>
