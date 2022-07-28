@@ -1,0 +1,9 @@
+{
+    "name": "filemgr_nodejs",
+    "version": "0.0.1",
+    "description": "A simple Node.js file manager",
+    "dependencies": {
+        "express": "^4.18.1",
+        "socket.io": "^4.5.1"
+    }
+}
