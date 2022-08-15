@@ -9,6 +9,10 @@ body {
     text-align: left;
 }
 
+.container h3 {
+    padding-left: 50px;
+}
+
 .container div {
     font-family: 'Roboto', sans-serif;
 }
