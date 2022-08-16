@@ -8,9 +8,6 @@
         <h1>File Manager</h1>
 
         <form id="archive-form" action="/fileupload" enctype="multipart/form-data" method="POST">
-            <label for="archive-input-name">Archive File Name</label>
-            <input type="text" placeholder="Enter a file name" required/>
-
             <label for="archive-input">Archive File Upload</label>
             <input type="file" name="archive" id="archive-input" @change="filesChange($event.taget.name, $event.target.files)" required/>
 
