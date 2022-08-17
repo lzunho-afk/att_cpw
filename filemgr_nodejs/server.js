@@ -11,7 +11,7 @@ const PORT = 8000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.post("/fileupload", upload.array("files"), uploadFiles);
+app.post("/fileupload", upload.array("archive-input"), uploadFiles);
 
 function uploadFiles(req, res) {
     console.log(req.body);

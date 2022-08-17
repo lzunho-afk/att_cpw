@@ -8,8 +8,11 @@
         <h1>File Manager</h1>
 
         <form id="archive-form" action="/fileupload" enctype="multipart/form-data" method="POST">
+            <label for="archive-input-name">Archive Filename</label>
+            <input type="text" name="archive-input-name" id="archive-input-name"/>
+
             <label for="archive-input">Archive File Upload</label>
-            <input type="file" name="archive" id="archive-input" @change="filesChange($event.taget.name, $event.target.files)" required/>
+            <input type="file" name="archive-input" id="archive-input" @change="filesChange($event.taget.name, $event.target.files)" required/>
 
             <input type="submit" value="Send">
         </form>
