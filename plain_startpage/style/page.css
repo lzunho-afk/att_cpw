@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "VCR_OSD_Mono";
+    src: url("../font/VCR_OSD_MONO.ttf");
+}
+
+html {
+    font-family: "VCR_OSD_Mono";
+}
+
+.site-error {
+    color: red;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    text-decoration: underline;
+}
+
+.header-img {
+    width: 100%;
+    max-width: 20%;
+    height: auto;
+}
+
+.action-btns button {
+    display: inline-block;
+    border: dotted 2px;
+    font-family: "VCR_OSD_Mono";
+    font-size: 16px;
+    padding: 16px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.action-btns button:hover {
+    background-color: gray;
+}
+
+#favourites-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.favourite {
+    text-align: center;
+    border: 1px solid;
+}
