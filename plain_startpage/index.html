@@ -2,6 +2,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Página Inicial</title>
         <link href="style/page.css" rel="stylesheet" />
         <script type="text/javascript" src="js/storage.js"></script>
@@ -16,10 +17,27 @@
                 <h1>Página Inicial</h1>
             </div>
             <div class="action-btns">
-                <button>Adicionar</button>
-                <button>Remover</button>
+                <a href="#add-favourite-form">Adicionar</a>
+                <a href="#del-favourite-form">Remover</a>
             </div>
         </div>
+
+        <div id="add-favourite-form" class="modal-dialog">
+            <div>
+                <a href="#close" class="close">X</a>
+                <h2>Adicionar Item - Favorito</h2>
+                <p>Para adicionar um item aos favoritos preencha o seguinte formulário:</p>
+            </div>
+        </div>
+
+        <div id="del-favourite-form" class="modal-dialog">
+            <div>
+                <a href="#close" class="close">X</a>
+                <h2>Deletar Item - Favorito</h2>
+                <p>Para remover um item dos favoritos preencha o seguinte formulário:</p>
+            </div>
+        </div>
+
         <div id="favourites-wrapper">
             <!--<div class="favourite">
                 <p>Favorito</p>

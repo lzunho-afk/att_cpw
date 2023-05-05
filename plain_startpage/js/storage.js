@@ -10,10 +10,10 @@ function storageAvailable(type) {
     } catch(e) {
         return (
             e instanceof DOMException &&
-		(e.code === 22 || e.code === 1014 ||
-		 e.name === "QuotaExceededError" ||
-		 e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
-		storage && storage.length !== 0
+            (e.code === 22 || e.code === 1014 ||
+                e.name === "QuotaExceededError" ||
+                e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+            storage && storage.length !== 0
         );
     }
 }
@@ -21,18 +21,18 @@ function storageAvailable(type) {
 window.onload = function() {
     // Testing localStorage
     if (storageAvailable("localStorage")) {
-	
+
     } else {
         // Console error
         console.error("Unable to use localStorage storage type!");
 
         // Site error
-	favourites_obj = document.getElementById('favourites-wrapper');
-	favourites_obj.appendChild(document.createElement('div'));
-	
+        favourites_obj = document.getElementById('favourites-wrapper');
+        favourites_obj.appendChild(document.createElement('div')); // empty div (1st block)
+
         var div = document.createElement('div');
         div.className = 'site-error';
         div.innerHTML = '<h5>Unable to use localStorage! Please, enable it...</h5>';
-        favourites_obj.appendChild(div);
+        favourites_obj.appendChild(div); // Error msg block
     }
 }
