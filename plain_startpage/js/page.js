@@ -1,6 +1,0 @@
-function addItem() {
-}
-
-function delItem() {
-}
-

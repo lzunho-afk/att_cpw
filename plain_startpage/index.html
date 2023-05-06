@@ -4,9 +4,8 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Página Inicial</title>
-        <link href="style/page.css" rel="stylesheet" />
+        <link href="style/main.css" rel="stylesheet" />
         <script type="text/javascript" src="js/storage.js"></script>
-        <script type="text/javascript" src="js/page.js"></script>
     </head>
     <body>
         <div class="header">
@@ -17,8 +16,8 @@
                 <h1>Página Inicial</h1>
             </div>
             <div class="action-btns">
-                <a href="#add-favourite-form">Adicionar</a>
-                <a href="#del-favourite-form">Remover</a>
+                <a href="#add-favourite-form">+Favorito</a>
+                <a href="#about">Sobre</a>
             </div>
         </div>
 
@@ -27,14 +26,31 @@
                 <a href="#close" class="close">X</a>
                 <h2>Adicionar Item - Favorito</h2>
                 <p>Para adicionar um item aos favoritos preencha o seguinte formulário:</p>
+                <form method="post" id="add-item-form" name="addItemForm">
+                    <div>
+                        <label for="item-name">Nome do Item:</label>
+                        <input type="text" minlength="3" maxlength="220" placeholder="item name" name="item-name" id="item-name" value="" required />
+                    </div> 
+                    <div>
+                        <label for="item-url">URL do Item:</label>
+                        <input type="url" placeholder="item url" name="item-url" id="item-url" value="" required />
+                    </div>
+                    <input type="submit" id="submit" value="Adicionar"/>
+                </form>
             </div>
         </div>
 
-        <div id="del-favourite-form" class="modal-dialog">
+        <div id="about" class="modal-dialog">
             <div>
                 <a href="#close" class="close">X</a>
-                <h2>Deletar Item - Favorito</h2>
-                <p>Para remover um item dos favoritos preencha o seguinte formulário:</p>
+                <h2>Projeto "Página Inicial" - Sobre</h2>
+                <p>O "Página Inicial" é um projeto desenvolvido por causa do meu tic com 
+                as páginas iniciais dos browsers, ou seja, ele serve como uma interface 
+                (página HTML) simples e limpa que pode substituir as páginas de inicialização
+                de browsers ou sites. Para mais informações sobre o projeto, por favor acesse 
+                o <a href="https://github.com/lzunho-afk/att_cpw" target="_blank">GitHub</a> 
+                ou entre em contato comigo pelo <a href="mailto:lucaszunho17@gmail.com">e-mail</a>
+                (utilize <a href="https://wiki.installgentoo.com/wiki/Email#Email_Encryption" target="_blank">PGP</a>).</p>
             </div>
         </div>
 
@@ -45,5 +61,6 @@
                 <p>Realmente, o pão de forma é ótimo!!</p>
                 </div>-->
         </div>
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

@@ -34,7 +34,7 @@ body {
     height: auto;
 }
 
-.action-btns a {
+.action-btns a, .modal-dialog form input[type="submit"] {
     display: inline-block;
     text-decoration: none;
     border: dotted 2px;
@@ -46,7 +46,7 @@ body {
     cursor: pointer;
 }
 
-.action-btns button:hover {
+.action-btns a:hover, .modal-dialog form input[type="submit"]:hover {
     background-color: gray;
 }
 
@@ -86,6 +86,24 @@ body {
     border-radius: 10px;
 }
 
+.modal-dialog p {
+    text-align: justify;
+}
+
+.modal-dialog form div {
+    margin: 16px;
+}
+
+.modal-dialog form input, .modal-dialog form label {
+    display: block;
+}
+
+.modal-dialog form input[type="text"], .modal-dialog form input[type="url"] {
+    font-size: 16px;
+    padding: 16px;
+    margin: 4px;
+}
+
 .close {
     background-color: none;
     color: white;
@@ -116,4 +134,10 @@ body {
     background-color: black;
     color: white;
     cursor: pointer;
+}
+
+@media screen and (max-width: 474px) {
+    .modal-dialog > div {
+        width: 90%;
+    }
 }
