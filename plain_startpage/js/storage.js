@@ -34,5 +34,6 @@ window.onload = function() {
         div.className = 'site-error';
         div.innerHTML = '<h5>Unable to use localStorage! Please, enable it...</h5>';
         favourites_obj.appendChild(div); // Error msg block
+        throw "";
     }
 }
